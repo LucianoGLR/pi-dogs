@@ -28,9 +28,13 @@ let entries = Object.entries(sequelize.models);
 let capsEntries = entries.map((entry) => [entry[0][0].toUpperCase() + entry[0].slice(1), entry[1]]);
 sequelize.models = Object.fromEntries(capsEntries);
 
+//? Relaciones
 // En sequelize.models están todos los modelos importados como propiedades
 // Para relacionarlos hacemos un destructuring
-const { Dog } = sequelize.models;
+const { Dog, Temperament } = sequelize.models;
+
+Temperament.belongsToMany(Dog, { through: 'dogTemperament' });
+Dog.belongsToMany(Temperament, { through: 'dogTemperament' });
 
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
