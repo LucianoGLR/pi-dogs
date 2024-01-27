@@ -1,29 +1,36 @@
-const { DataTypes } = require('sequelize');
+const { DataTypes, UUIDV4 } = require('sequelize');
 
 const dog = (sequelize) => {
   // defino el modelo
   sequelize.define('dog', {
     id: {
-      type: DataTypes.INTEGER,
-      unique: true,
-      autoIncrement: true,
+      type: DataTypes.UUID,
       primaryKey: true,
+      defaultValue: DataTypes.UUIDV4
     },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     image: {
-        type: DataTypes.INTEGER
+      type: DataTypes.STRING,
+      allowNull: true
     },
     height: {
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
+      allowNull: true
     },
     weight: {
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
+      allowNull: true
     },
     life_span: {
-      type: DataTypes.INTEGER
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    created: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true
     }
   },{
     timestamps: false

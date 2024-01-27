@@ -1,0 +1,119 @@
+/* .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    border: 1px solid #ddd;
+    margin: 10px;
+    overflow: hidden; /* Evitar que el contenido salga de la card */
+/* }
+  
+  .card-container img{
+
+  }
+
+  .linkStyle {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
+
+/* /* .linkStyle img {
+    /* max-height: 100%; Ajusta la altura máxima de la imagen al 100% del contenedor */
+/* width: 100%;
+    height: 10px;
+    object-fit: cover;
+    object-position: center;
+    border-bottom: 2px solud red;
+/* } 
+  
+  .linkStyle h4, .linkStyle p {
+    margin: 5px 0; /* Ajusta el margen del texto según sea necesario */
+/* }
+
+  .linkStyle p {
+    margin: 5px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Muestra solo 2 líneas de texto */
+/* -webkit-box-orient: vertical; */
+
+.Principal-container {
+    position: relative;
+    height: 100vh;
+    overflow: auto;
+}
+
+.banner-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.games-div {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.dog-card {
+    box-sizing: border-box;
+    border: 2px solid #83838342;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 300px;
+    max-height: 400px;
+    overflow: hidden;
+    background-color: #ffb485b1;
+    color: #fff;
+    display: flex;
+    backdrop-filter: blur(0.7px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 0px 15px 0px #000;
+}
+
+.dog-card:hover {
+    transform: scale(1.05);
+}
+
+.dog-card-img {
+    width: 100%;
+    height: 250px;
+    object-fit:contain;
+    object-position: center;
+}
+
+.dog-card h2 {
+    margin: 8px 0;
+    font-size: 0.9rem;
+}
+
+.dog-card p {
+    margin: 2px 0;
+    font-size: 0.7rem;
+    font-family:monospace;
+    font-weight:bolder;
+}
+
+.linkStyle {
+    text-decoration: none; /* Elimina la decoración predeterminada de los enlaces */
+    color: inherit; /* Hereda el color del texto del elemento padre (en este caso, .dog-card) */
+  }
+  
+  .linkStyle:hover {
+    text-decoration: none; /* Elimina la decoración en el estado de "hover" */
+    color: inherit; /* Hereda el color del texto del elemento padre en el estado de "hover" */
+  }

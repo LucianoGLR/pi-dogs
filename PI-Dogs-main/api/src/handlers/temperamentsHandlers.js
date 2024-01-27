@@ -8,7 +8,7 @@ const getAllTemperaments = async (req, res) => {
 
         let info = response.data.map(dog => ({
             name: dog.name,
-            temperamento: dog.temperament
+            temperament: dog.temperament
         }))
 
         res.json(info)

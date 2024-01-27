@@ -1,18 +1,18 @@
 const { Router } = require('express')
-const { getAllDogs, getDogsByQuery, createDog, getDogById} = require('../handlers/dogsHandlers')
+const { getDogsHandler, getDogsByQuery, createDog, getDogDetail} = require('../handlers/dogsHandlers')
 
 const dogsRouter = Router()
-
-//? Ruta para obtener todos los diferentes perros
-dogsRouter.get('/', getAllDogs)
 
 //? Ruta para crear un nuevo perro
 dogsRouter.post('/', createDog)
 
-//? Ruta para obtener todas las razas de perro que cooincidan con la informacion pasada por query
-dogsRouter.get('/name?', getDogsByQuery)
+//? Ruta para obtener todos los diferentes perros
+dogsRouter.get('/', getDogsHandler)
 
 //? Ruta para filtrar perros mediante su razaId
-dogsRouter.get('/:id', getDogById)
+dogsRouter.get('/:id', getDogDetail)
+
+//? Ruta para obtener todas las razas de perro que cooincidan con la informacion pasada por query
+// dogsRouter.get('/name?', getDogsByQuery)
 
 module.exports = dogsRouter;
